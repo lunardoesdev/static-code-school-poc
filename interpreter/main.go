@@ -44,7 +44,7 @@ func runGo(this js.Value, args []js.Value) any {
 	}
 	out, err := runSource(args[0].String(), stdin)
 	if err != nil {
-		return map[string]any{"ok": false, "error": err.Error()}
+		return map[string]any{"ok": false, "output": err.Error()}
 	}
 	return map[string]any{"ok": true, "output": out}
 }

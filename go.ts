@@ -6,6 +6,7 @@ const {instance} = await WebAssembly.instantiateStreaming(
 )
 go.run(instance)
 
-export default function(code: string): any {
-    return runGo(code)
+export default function(code: string, stdin: string = ""): {ok: boolean, output: string} {
+    const result = runGo(code, stdin)
+    return result
 }

@@ -42,6 +42,10 @@ return 0
 ## Harness
 
 ```go
+import "fmt"
+
+@@@studentcode
+
 func main() {
     var a, b int
     fmt.Scan(&a, &b)
@@ -53,7 +57,6 @@ func main() {
 
 ```test
 2 3
-4 5
 @@@
 5
 ```

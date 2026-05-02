@@ -47,7 +47,8 @@ type Lesson = {
     tutorial: string;
     task: string;
     template: string;
-    tests: {stdin: string, wantedStdout: string}[]
+    tests: {stdin: string, wantedStdout: string}[];
+    harness: string;
 }
 
 export default function parseLesson(raw: string): Lesson {
@@ -68,7 +69,8 @@ export default function parseLesson(raw: string): Lesson {
         tutorial: extractText(sections[1]),
         task: extractText(sections[2]),
         template: extractText(sections[3]),
-        tests: tests
+        tests: tests,
+        harness: extractText(sections[4])
     }
 
     return lesson
