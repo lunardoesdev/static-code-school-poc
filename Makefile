@@ -1,6 +1,8 @@
 .PHONY: clean build serve
 
-generated/yaegi.wasm:
+build: ./dist/index.html
+
+generated/yaegi.wasm: interpreter/main.go
 	make -C interpreter
 
 clean:
@@ -8,8 +10,6 @@ clean:
 
 ./dist/index.html: generated/yaegi.wasm
 	bun build ./index.html --outdir ./dist
-
-build: ./dist/index.html
 
 serve: generated/yaegi.wasm
 	bun ./index.html	
