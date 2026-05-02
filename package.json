@@ -10,6 +10,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "markdown-it": "^14.1.1",
     "monaco-editor": "^0.55.1",
     "very-small-parser": "^1.15.0"
   }

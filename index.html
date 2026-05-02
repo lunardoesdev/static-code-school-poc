@@ -6,12 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="tutorial"></div>
-    <div id="editor"></div>
-    <div id="tests">
-        <button id="checkButton" value="asddf">check</button>
-        <div id="testDescription"></div>
+    <div id="grid">
+        <div id="leftGrid">
+            <div id="editor"></div>
+        </div>
+        <div id="rightGrid">
+            <div id="tutorial"></div>
+            <div id="tests">
+                <button id="checkButton" value="asddf">check</button>
+                <div id="testDescription"></div>
+            </div>
+        </div>
     </div>
+
     <link rel="stylesheet" href="./style.css">
     <script src="./generated/wasm_exec.js"></script>
     <script src="./index.ts"></script>

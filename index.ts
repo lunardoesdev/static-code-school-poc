@@ -3,7 +3,12 @@ import testLesson from './lesson1.md' with {type: "text"}
 import parseLesson from './lessonParser'
 
 import * as monaco from 'monaco-editor'
-
+import markdownit from 'markdown-it'
+const md = markdownit({
+  html: true,
+  linkify: true,
+  typographer: true
+})
 
 const lesson = parseLesson(testLesson)
 
@@ -43,6 +48,9 @@ function updateTestResults() {
 
 document.getElementById("checkButton")!.onclick = updateTestResults
 updateTestResults()
+
+const tutorial = md.render(testLesson.split("\n##")[0])
+document.getElementById("tutorial")!.innerHTML = tutorial
 
 // document.write(runGo(`
 //     package main
