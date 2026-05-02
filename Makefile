@@ -1,4 +1,4 @@
-.PHONY: clean build
+.PHONY: clean build serve
 
 generated/yaegi.wasm:
 	make -C interpreter
@@ -10,3 +10,6 @@ clean:
 	bun build ./index.html --outdir ./dist
 
 build: ./dist/index.html
+
+serve: generated/yaegi.wasm
+	bun ./index.html	

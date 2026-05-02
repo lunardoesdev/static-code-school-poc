@@ -7,6 +7,7 @@ const {instance} = await WebAssembly.instantiateStreaming(
 go.run(instance)
 
 runGo(`
+    package main
     import "fmt"
 
     func main() {
