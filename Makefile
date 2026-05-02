@@ -9,6 +9,7 @@ clean:
 	rm -rf generated dist
 
 ./dist/index.html: generated/yaegi.wasm
+	bun install
 	bun build ./index.html --outdir ./dist
 
 serve: generated/yaegi.wasm
