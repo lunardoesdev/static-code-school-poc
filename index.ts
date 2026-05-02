@@ -1,16 +1,10 @@
-import yaegiWasmURL from "./generated/yaegi.wasm"
-
-const go = new Go()
-const {instance} = await WebAssembly.instantiateStreaming(
-    fetch(yaegiWasmURL), go.importObject
-)
-go.run(instance)
+import runGo from './go'
 
 runGo(`
     package main
     import "fmt"
 
     func main() {
-        fmt.Println("Hello from deep wasm")
+        fmt.Println("Hey")
     }
 `)
