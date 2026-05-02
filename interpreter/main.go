@@ -21,7 +21,7 @@ func runSource(src string, stdin string) (string, error) {
 	if err := i.Use(stdlib.Symbols); err != nil {
 		return "", fmt.Errorf("Error loading stdlib: %w", err)
 	}
-	v, err := i.Eval(src)
+	_, err := i.Eval(src)
 	if err != nil {
 		return "", err
 	}
@@ -29,7 +29,7 @@ func runSource(src string, stdin string) (string, error) {
 	//  if err != nil {
 	//  	return "", fmt.Errorf("runtime error: %w", err)
 	//  }
-	return fmt.Sprint(v.Interface()), nil
+	return fmt.Sprint(buf.String()), nil
 
 }
 
