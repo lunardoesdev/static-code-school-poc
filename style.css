@@ -15,5 +15,6 @@ html, body {
 
 #rightGrid {
     height: 100vh;
+    width: 50vw;
     overflow-y: scroll;
 }
