@@ -33,11 +33,11 @@ from standard input and prints their sum.
 ## Template
 
 ```go
-
+import "fmt"
 
 func Sum(a, b int) int {
-// your code here
-return 0
+    // your code here
+    return 0
 }
 
 
@@ -46,8 +46,6 @@ return 0
 ## Harness
 
 ```go
-import "fmt"
-
 @@@studentcode
 
 func main() {

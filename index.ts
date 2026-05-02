@@ -21,6 +21,15 @@ const editor = monaco.editor.create(document.getElementById("editor")!, {
     theme: "vs-dark",
     minimap: { enabled: false },
     automaticLayout: true,
+    fontFamily: "'JetBrains Mono', Consolas, monospace",
+    fontSize: 16,
+    tabSize: 4,
+    insertSpaces: false,
+    wordWrap: 'on',
+    scrollBeyondLastLine: false,
+    renderWhitespace: "selection",
+    padding: {top: 10, bottom: 10},
+    lineNumbers: "on"
 })
 
 function runTest(test: {stdin: string, wantedStdout: string}): {ok: boolean, error?: string, output?: string} {
