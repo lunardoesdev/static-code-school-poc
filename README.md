@@ -1,0 +1,1 @@
+# static code school proof-of-concept
